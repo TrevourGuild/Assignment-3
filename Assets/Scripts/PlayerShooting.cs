@@ -35,6 +35,15 @@ public class PlayerShooting : MonoBehaviour
         {
             shootTimer = shootTimer - (shootTimerReduction * Time.deltaTime);
         }
+
+        // After one second, delete bullet to clear up memory.
+        if (shootTimer <= 0f)
+        {
+            if (clone != null)
+            {
+                Destroy(clone);
+            }
+        }
         Debug.Log("" + shootTimer);
 
        
