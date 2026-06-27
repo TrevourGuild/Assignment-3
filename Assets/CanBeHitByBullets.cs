@@ -6,6 +6,7 @@ public class CanBeHitByBullets : MonoBehaviour
 {
     public bool isHit = false;
     Animator animator;
+    
  
     private void Awake()
     {
@@ -17,6 +18,16 @@ public class CanBeHitByBullets : MonoBehaviour
         if (isHit)
         {
             animator.SetBool("isHit", true);
+
+            int random = Random.Range(0, 100);
+            if (random >= 50)
+            {
+                animator.SetBool("death1", true);
+            }
+            else
+            {
+                animator.SetBool("death1", false);
+            }
         }
     }
 }
