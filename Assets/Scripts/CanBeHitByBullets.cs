@@ -17,7 +17,12 @@ public class CanBeHitByBullets : MonoBehaviour
     {
         if (isHit)
         {
+
+            
+
             animator.SetBool("isHit", true);
+
+            //GetComponent<AudioSource>().Play();
 
             int random = Random.Range(0, 100);
             if (random >= 50)

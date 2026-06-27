@@ -28,6 +28,10 @@ public class PlayerShooting : MonoBehaviour
             clone.transform.rotation = shootPoint.transform.rotation;
 
             shootTimer = 1f;
+
+            GetComponent<AudioSource>().Play();
+
+            FindObjectOfType<MusicManager>().PlayerShotGun();
         }
         
         // Only allow 1 bullet to be spawned per second

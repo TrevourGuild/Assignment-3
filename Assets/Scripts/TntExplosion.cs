@@ -13,7 +13,10 @@ public class TntExplosion : MonoBehaviour
     {
         if (!wasTriggered)
         {
+
             explosionEffect.Play();
+
+            //GetComponent<AudioSource>().Play();
             
             clone = Instantiate(brokenBarrel);
             clone.transform.position = gameObject.transform.position;
