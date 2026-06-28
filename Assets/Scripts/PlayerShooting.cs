@@ -6,6 +6,9 @@ public class PlayerShooting : MonoBehaviour
 {
     public GameObject prefab;
     public GameObject shootPoint;
+    public AudioSource playerSound;
+    public AudioClip pistolSound;
+    public AudioClip shriekSound;
     private GameObject clone;
     private float shootTimer = 1f;
     private float shootTimerReduction = 1f;
@@ -29,7 +32,8 @@ public class PlayerShooting : MonoBehaviour
 
             shootTimer = 1f;
 
-            GetComponent<AudioSource>().Play();
+            playerSound.clip = pistolSound;
+            playerSound.Play();
 
             FindObjectOfType<MusicManager>().PlayerShotGun();
         }

@@ -8,6 +8,7 @@ public class TntExplosion : MonoBehaviour
     public GameObject brokenBarrel;
     private GameObject clone;
     private bool wasTriggered = false;
+    public AudioSource explosionSound;
 
    void OnTriggerEnter()
     {
@@ -15,6 +16,7 @@ public class TntExplosion : MonoBehaviour
         {
 
             explosionEffect.Play();
+            explosionSound.Play();
 
             //GetComponent<AudioSource>().Play();
             
