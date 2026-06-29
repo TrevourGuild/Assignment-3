@@ -1,4 +1,3 @@
-# Desert Outpost 51 / Western Town
 **GAME-351 – Assignment 3**
 
 ## Team Members
